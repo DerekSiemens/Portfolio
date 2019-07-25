@@ -19,6 +19,9 @@ import '../../styles/app.css'
 *
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
+    console.log(data);
+    const title = data.allHomePageJson.edges[0].node.title
+    const description = data.allHomePageJson.edges[0].node.description
     const site = data.allGhostSettings.edges[0].node
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
@@ -54,8 +57,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </div>
                         { isHome ?
                             <div className="site-banner">
-                                <h1 className="site-banner-title">{site.title}</h1>
-                                <p className="site-banner-desc">{site.description}</p>
+                                <h1 className="site-banner-title">{title}</h1>
+                                <p className="site-banner-desc">{description}</p>
                             </div> :
                             null}
                         <nav className="site-nav">
@@ -122,6 +125,14 @@ const DefaultLayoutSettingsQuery = props => (
                         fixed(width: 30, height: 30) {
                             ...GatsbyImageSharpFixed
                         }
+                    }
+                }
+                allHomePageJson {
+                    edges {
+                        node {
+                         title
+                         description
+                         }
                     }
                 }
             }
