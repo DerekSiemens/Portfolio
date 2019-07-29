@@ -14,7 +14,7 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Index = ({ data, location, pageContext }) => {
-    const posts = data.allGhostPost.edges
+    const posts = data.allCardsJson.edges[0].node.cards
 
     return (
         <>
@@ -22,9 +22,9 @@ const Index = ({ data, location, pageContext }) => {
             <Layout isHome={true}>
                 <div className="container">
                     <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
+                        {posts.map(card => (
+                            // ADD BACK IN KEY={ID}
+                            <PostCard key={card.id} post={card} />
                         ))}
                     </section>
                     <Pagination pageContext={pageContext} />
@@ -60,6 +60,19 @@ export const pageQuery = graphql`
           ...GhostPostFields
         }
       }
+    }
+    allCardsJson {
+        edges {
+            node {
+                cards {
+                    title
+                    feature_image
+                    excerpt
+                    slug
+                    id
+                }
+            }
+        }
     }
   }
 `

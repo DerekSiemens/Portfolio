@@ -52,6 +52,18 @@ exports.createPages = async ({ graphql, actions }) => {
                     }
                 }
             }
+            allPostPagesJson{
+                edges {
+                    node {
+                        Pages {
+                            id
+                            html
+                            slug
+                            title
+                        }
+                    }
+                }
+            }
         }
     `)
 

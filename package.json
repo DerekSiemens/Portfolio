@@ -33,6 +33,8 @@
     "eslint-plugin-react": "7.14.2"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
     "@tryghost/helpers": "1.1.6",
     "@tryghost/helpers-gatsby": "1.0.9",
     "cheerio": "1.0.0-rc.3",
