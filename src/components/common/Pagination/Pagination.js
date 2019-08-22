@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { PaginationNav } from '.';
+import { PaginationNav } from '.'
 
 const Pagination = ({ pageContext }) => {
     const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext

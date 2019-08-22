@@ -15,7 +15,7 @@
     },
     {
         "title": "Projects",
-        "excerpt": "When I'm not working or in school, here's a collection of the things I like to work on. blah blah",
+        "excerpt": "Here are a collection of things I have recently done when I have had some spare time from work or school! Always more coming in the future.",
         "feature_image": "https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
         "slug": "/Projects",
         "id":"projects"
@@ -24,6 +24,7 @@
         "title": "Tetris",
         "excerpt": "As the start to a larger project, I have recently developed an in browser Tetris here on the site. Come give it a try!",
         "feature_image": "https://images.unsplash.com/photo-1554741458-08edc3611229?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+        "type": "Project",
         "slug": "/Tetris",
         "id":"tetris"
     },
@@ -31,6 +32,7 @@
         "title": "Spotify API",
         "excerpt": "As a way to gain experience using API's, here's a small project I made to leverage the Spotify API. After providing some information it does blah blarp",
         "feature_image": "https://images.unsplash.com/photo-1504509546545-e000b4a62425?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        "type": "Project",
         "slug": "/Spotify-API",
         "id":"spotify"
     },
@@ -46,6 +48,7 @@
         "excerpt": "After seeing a photo online of someone who had done this, I knew I had to try making one. Thankfully the code was all open source and available on github with a very active community building all sorts of cool modules to add on",
         "feature_image": "src/constants/images/stockPhoto.jpg",
         "slug": "/Magic-Mirror",
+        "type": "Project",
         "id":"magicmirror"
     }]
 }

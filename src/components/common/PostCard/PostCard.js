@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { PostCardLink, PostCardImage, PostCardTitle, PostCardExcerpt } from '.'
 
 const PostCard = ({ post }) => {
-    const url = `/${post.slug}/`
+    const url = `${post.slug}`
 
     return (
         <PostCardLink to={url}>

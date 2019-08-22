@@ -1,6 +1,6 @@
 {
         "title": "About Me",
-        "html": "<h2>In Development</h2>",
+        "html": "<p>In Development</p>",
         "slug": "/About-Me",
         "id":"aboutMe"
 }
