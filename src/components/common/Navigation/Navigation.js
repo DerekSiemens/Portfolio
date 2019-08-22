@@ -14,11 +14,11 @@ import { Link } from 'gatsby'
 */
 const Navigation = ({ data, navClass }) => (
     <>
-        {data.map((navItem, i) => {
-            if (navItem.url.match(/^\s?http(s?)/gi)) {
-                return <a className={navClass} href={navItem.url} key={i} target="_blank" rel="noopener noreferrer">{navItem.label}</a>
+        {data.map((navItem) => {
+            if (navItem.to.match(/^\s?http(s?)/gi)) {
+                return <a className={navClass} href={navItem.to} key={navItem.text} target="_blank" rel="noopener noreferrer">{navItem.text}</a>
             } else {
-                return <Link className={navClass} to={navItem.url} key={i}>{navItem.label}</Link>
+                return <Link className={navClass} to={navItem.to} key={navItem.text}>{navItem.text}</Link>
             }
         })}
     </>
@@ -31,8 +31,8 @@ Navigation.defaultProps = {
 Navigation.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            label: PropTypes.string.isRequired,
-            url: PropTypes.string.isRequired,
+            text: PropTypes.string.isRequired,
+            to: PropTypes.string.isRequired,
         }).isRequired,
     ).isRequired,
     navClass: PropTypes.string,

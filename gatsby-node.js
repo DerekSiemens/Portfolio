@@ -55,12 +55,10 @@ exports.createPages = async ({ graphql, actions }) => {
             allPostPagesJson{
                 edges {
                     node {
-                        Pages {
-                            id
-                            html
-                            slug
-                            title
-                        }
+                        id
+                        html
+                        slug
+                        title
                     }
                 }
             }
@@ -77,6 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const authors = result.data.allGhostAuthor.edges
     const pages = result.data.allGhostPage.edges
     const posts = result.data.allGhostPost.edges
+    const myPosts = result.data.allPostPagesJson.edges
 
     // Load templates
     const indexTemplate = path.resolve(`./src/templates/index.js`)
@@ -84,6 +83,18 @@ exports.createPages = async ({ graphql, actions }) => {
     const authorTemplate = path.resolve(`./src/templates/author.js`)
     const pageTemplate = path.resolve(`./src/templates/page.js`)
     const postTemplate = path.resolve(`./src/templates/post.js`)
+
+    myPosts.forEach(({ node }) => {
+        createPage({
+            path: node.slug,
+            component: postTemplate,
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.slug,
+            },
+        })
+    })
 
     // Create tag pages
     tags.forEach(({ node }) => {

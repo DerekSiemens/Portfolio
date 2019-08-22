@@ -40,5 +40,12 @@
         "feature_image": "https://images.unsplash.com/photo-1519181258491-889c2b001485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
         "slug": "/Work-Experience",
         "id":"workExperience"
+    },
+    {
+        "title": "Magic Mirror",
+        "excerpt": "After seeing a photo online of someone who had done this, I knew I had to try making one. Thankfully the code was all open source and available on github with a very active community building all sorts of cool modules to add on",
+        "feature_image": "src/constants/images/stockPhoto.jpg",
+        "slug": "/Magic-Mirror",
+        "id":"magicmirror"
     }]
 }

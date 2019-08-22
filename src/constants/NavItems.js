@@ -1,22 +1,22 @@
 export const NAVIGATION_ROUTES = [
     {
-        to: `/Home`,
+        to: `/`,
         text: `Home`,
     },
     {
-        to: `/About`,
-        text: `About`,
+        to: `/About-Me`,
+        text: `About Me`,
+    },
+    {
+        to: `/About-This-Site`,
+        text: `About This Site`,
     },
     {
         to: `/Projects`,
         text: `Projects`,
     },
     {
-        to: `/Experience`,
-        text: `Experience`,
-    },
-    {
-        to: `/Contact`,
-        text: `Contact`,
+        to: `/Work-Experience`,
+        text: `Work Experience`,
     },
 ]

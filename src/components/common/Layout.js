@@ -7,6 +7,7 @@ import { Navigation } from '.'
 
 // Styles
 import '../../styles/app.css'
+import { NAVIGATION_ROUTES } from '../../constants/NavItems'
 
 /**
 * Main layout component
@@ -38,10 +39,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <div className="site-mast">
                             <div className="site-mast-left">
                                 <Link to="/">
-                                    {site.logo ?
+                                    {/*site.logo ?
                                         <img className="site-logo" src={site.logo} alt={site.title} />
                                         : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                    }
+                                    */}
                                 </Link>
                             </div>
                             <div className="site-mast-right">
@@ -57,10 +58,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <nav className="site-nav">
                             <div className="site-nav-left">
                                 {/* The navigation items as setup in Ghost */}
-                                <Navigation data={site.navigation} navClass="site-nav-item" />
+                                <Navigation data={NAVIGATION_ROUTES}/>
                             </div>
                             <div className="site-nav-right">
-                                <Link className="site-nav-button" to="/about">About</Link>
+                                <Link className="site-nav-button" to="/Contact">Contact</Link>
                             </div>
                         </nav>
                     </div>
@@ -81,7 +82,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             <Link to="/">{site.title}</Link> © 2019 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
                         </div>
                         <div className="site-foot-nav-right">
-                            <Navigation data={site.navigation} navClass="site-foot-nav-item" />
+                            <Navigation data={NAVIGATION_ROUTES}/>
                         </div>
                     </div>
                 </footer>

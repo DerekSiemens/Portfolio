@@ -4,34 +4,27 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import { Layout } from '../components/common'
-import { MetaData } from '../components/common/meta'
-
 /**
 * Single post view (/:slug)
 *
 * This file renders a single post and loads all the content.
 *
 */
-const Post = ({ data, location }) => {
-    const post = data.ghostPost
+const Post = ({ data }) => {
+    const post = data.postPagesJson
 
     return (
             <>
-                <MetaData
-                    data={data}
-                    location={location}
-                    type="article"
-                />
                 <Helmet>
-                    <style type="text/css">{`${post.codeinjection_styles}`}</style>
+                    { /*<style type="text/css">{`${post.codeinjection_styles}`}</style>*/}
                 </Helmet>
                 <Layout>
                     <div className="container">
                         <article className="content">
-                            { post.feature_image ?
+                            { /*post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={ post.feature_image } alt={ post.title } />
-                                </figure> : null }
+                                </figure> : null */}
                             <section className="post-full-content">
                                 <h1 className="content-title">{post.title}</h1>
 
@@ -50,13 +43,12 @@ const Post = ({ data, location }) => {
 
 Post.propTypes = {
     data: PropTypes.shape({
-        ghostPost: PropTypes.shape({
-            title: PropTypes.string.isRequired,
-            html: PropTypes.string.isRequired,
+        postPagesJson: PropTypes.shape({
+            title: PropTypes.string,
+            html: PropTypes.string,
             feature_image: PropTypes.string,
-        }).isRequired,
-    }).isRequired,
-    location: PropTypes.object.isRequired,
+        }),
+    }),
 }
 
 export default Post
@@ -66,5 +58,11 @@ export const postQuery = graphql`
         ghostPost(slug: { eq: $slug }) {
             ...GhostPostFields
         }
+    postPagesJson(slug: { eq: $slug }) {
+                slug
+                title
+                id
+                html
     }
+}
 `
