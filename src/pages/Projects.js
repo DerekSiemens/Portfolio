@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, PostCard, Pagination } from '../components/common'
+import { Layout, Pagination } from '../components/common'
+import PostFeed from '../components/common/Posts/PostFeed'
 
 /**
 * Main index page (home page)
@@ -19,12 +20,7 @@ const Projects = ({ data, pageContext }) => {
         <>
             <Layout isHome={true}>
                 <div className="container">
-                    <section className="post-feed">
-                        {posts.map(card => (
-                            // ADD BACK IN KEY={ID}
-                            <PostCard key={card.id} post={card} />
-                        ))}
-                    </section>
+                    <PostFeed posts={posts}/>
                     <Pagination pageContext={pageContext} />
                 </div>
             </Layout>
