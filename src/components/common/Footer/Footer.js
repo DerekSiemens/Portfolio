@@ -7,7 +7,8 @@ const Footer = ({ data }) => (
     <SiteFooter>
         <div className="site-foot-nav container">
             <RightFooterNavDiv>
-                {data.map(navItem => (<NavItem className={`site-nav-item`} to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
+                {data.map(navItem => (
+                    <NavItem className={`site-nav-item`} to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
                 ))}
             </RightFooterNavDiv>
         </div>
