@@ -21,7 +21,6 @@ const DefaultLayout = ({ data, children, isHome }) => {
     const description = data.allHomePageJson.edges[0].node.description
 
     return (
-    <>
         <div className="viewport">
             <div className="viewport-top">
                 {/* The main header section on top of the screen */}
@@ -37,8 +36,6 @@ const DefaultLayout = ({ data, children, isHome }) => {
 
             </div>
         </div>
-
-    </>
     )
 }
 

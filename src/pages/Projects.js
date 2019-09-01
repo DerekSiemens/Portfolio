@@ -17,14 +17,12 @@ const Projects = ({ data, pageContext }) => {
     const posts = data.allCardsJson.edges[0].node.cards.filter(card => card.type === `Project`)
 
     return (
-        <>
-            <Layout isHome={true}>
-                <ContainerDiv>
-                    <PostFeed posts={posts}/>
-                    <Pagination pageContext={pageContext} />
-                </ContainerDiv>
-            </Layout>
-        </>
+        <Layout isHome={false}>
+            <ContainerDiv>
+                <PostFeed posts={posts}/>
+                <Pagination pageContext={pageContext} />
+            </ContainerDiv>
+        </Layout>
     )
 }
 

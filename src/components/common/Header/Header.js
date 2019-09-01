@@ -5,7 +5,6 @@ import Navigation from '../Navigation/Navigation'
 import { ContainerDiv } from '..'
 
 const Header = ({ data, title, description, isHome }) => (
-
     <SiteHeader>
         <ContainerDiv>
             <SiteMast>

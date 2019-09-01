@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import { Layout, ContainerDiv, ArticleContent } from '../components/common'
 /**
@@ -14,30 +13,25 @@ const Post = ({ data }) => {
     const post = data.postPagesJson
 
     return (
-            <>
-                <Helmet>
-                    { /*<style type="text/css">{`${post.codeinjection_styles}`}</style>*/}
-                </Helmet>
-                <Layout>
-                    <ContainerDiv>
-                        <ArticleContent>
-                            { /*post.feature_image ?
+        <Layout>
+            <ContainerDiv>
+                <ArticleContent>
+                    { /*post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={ post.feature_image } alt={ post.title } />
                                 </figure> : null */}
-                            <section className="post-full-content">
-                                <h1 className="content-title">{post.title}</h1>
+                    <section className="post-full-content">
+                        <h1 className="content-title">{post.title}</h1>
 
-                                {/* The main post content */ }
-                                <section
-                                    className="content-body load-external-scripts"
-                                    dangerouslySetInnerHTML={{ __html: post.html }}
-                                />
-                            </section>
-                        </ArticleContent>
-                    </ContainerDiv>
-                </Layout>
-            </>
+                        {/* The main post content */ }
+                        <section
+                            className="content-body load-external-scripts"
+                            dangerouslySetInnerHTML={{ __html: post.html }}
+                        />
+                    </section>
+                </ArticleContent>
+            </ContainerDiv>
+        </Layout>
     )
 }
 

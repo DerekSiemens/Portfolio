@@ -17,14 +17,12 @@ const Index = ({ data, pageContext }) => {
     const posts = data.allCardsJson.edges[0].node.cards
 
     return (
-        <>
-            <Layout isHome={true}>
-                <ContainerDiv>
-                    <PostFeed posts={posts}/>
-                    <Pagination pageContext={pageContext} />
-                </ContainerDiv>
-            </Layout>
-        </>
+        <Layout isHome={true}>
+            <ContainerDiv>
+                <PostFeed posts={posts}/>
+                <Pagination pageContext={pageContext} />
+            </ContainerDiv>
+        </Layout>
     )
 }
 

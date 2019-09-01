@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const PaginationNav = styled.nav`
-position: relative;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
