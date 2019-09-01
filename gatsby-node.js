@@ -21,6 +21,19 @@ exports.createPages = async ({ graphql, actions }) => {
                     }
                 }
             }
+            allCardsJson {
+                edges {
+                    node {
+                        cards {
+                            title
+                            feature_image
+                            excerpt
+                            slug
+                            id
+                        }
+                    }
+                }
+            }
         }
     `)
 
@@ -31,7 +44,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Extract query results
     const myPosts = result.data.allPostPagesJson.edges
-
+    const allCards = result.data.allCardsJson.edges[0].node.cards
     // Load templates
     const indexTemplate = path.resolve(`./src/templates/index.js`)
     const postTemplate = path.resolve(`./src/templates/post.js`)
@@ -51,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
     // Create pagination
     paginate({
         createPage,
-        items: myPosts,
+        items: allCards,
         itemsPerPage: postsPerPage,
         component: indexTemplate,
         pathPrefix: ({ pageNumber }) => {

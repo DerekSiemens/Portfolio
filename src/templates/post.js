@@ -55,14 +55,11 @@ export default Post
 
 export const postQuery = graphql`
     query($slug: String!) {
-        ghostPost(slug: { eq: $slug }) {
-            ...GhostPostFields
-        }
-    postPagesJson(slug: { eq: $slug }) {
-                slug
-                title
-                id
-                html
+        postPagesJson(slug: { eq: $slug }) {
+            slug
+            title
+            id
+            html
     }
 }
 `

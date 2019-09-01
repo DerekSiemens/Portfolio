@@ -14,7 +14,7 @@ import PostFeed from '../components/common/Posts/PostFeed'
 * in /utils/siteConfig.js under `postsPerPage`.
 *
 */
-const Index = ({ data, location, pageContext }) => {
+const Index = ({ data, pageContext }) => {
     const posts = data.allCardsJson.edges[0].node.cards
 
     return (
@@ -32,7 +32,6 @@ const Index = ({ data, location, pageContext }) => {
 
 Index.propTypes = {
     data: PropTypes.shape({
-        allGhostPost: PropTypes.object.isRequired,
         allCardsJson: PropTypes.object.isRequired,
     }).isRequired,
     location: PropTypes.shape({
@@ -46,18 +45,7 @@ export default Index
 // This page query loads all posts sorted descending by published date
 // The `limit` and `skip` values are used for pagination
 export const pageQuery = graphql`
-  query GhostPostQuery($limit: Int!, $skip: Int!) {
-    allGhostPost(
-        sort: { order: DESC, fields: [published_at] },
-        limit: $limit,
-        skip: $skip
-    ) {
-      edges {
-        node {
-          ...GhostPostFields
-        }
-      }
-    }
+  query GhostPostQuery {
     allCardsJson {
         edges {
             node {
