@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import { Layout, Pagination } from '../components/common'
-import { MetaData } from '../components/common/meta'
 import PostFeed from '../components/common/Posts/PostFeed'
 
 /**
@@ -19,7 +18,6 @@ const Index = ({ data, pageContext }) => {
 
     return (
         <>
-            <MetaData location={location} />
             <Layout isHome={true}>
                 <div className="container">
                     <PostFeed posts={posts}/>
