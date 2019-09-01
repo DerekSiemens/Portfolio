@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, Pagination } from '../components/common'
+import { Layout, Pagination, ContainerDiv } from '../components/common'
 import PostFeed from '../components/common/Posts/PostFeed'
 
 /**
@@ -19,10 +19,10 @@ const Index = ({ data, pageContext }) => {
     return (
         <>
             <Layout isHome={true}>
-                <div className="container">
+                <ContainerDiv>
                     <PostFeed posts={posts}/>
                     <Pagination pageContext={pageContext} />
-                </div>
+                </ContainerDiv>
             </Layout>
         </>
     )

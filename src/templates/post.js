@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import { Layout } from '../components/common'
+import { Layout, ContainerDiv, ArticleContent } from '../components/common'
 /**
 * Single post view (/:slug)
 *
@@ -19,8 +19,8 @@ const Post = ({ data }) => {
                     { /*<style type="text/css">{`${post.codeinjection_styles}`}</style>*/}
                 </Helmet>
                 <Layout>
-                    <div className="container">
-                        <article className="content">
+                    <ContainerDiv>
+                        <ArticleContent>
                             { /*post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={ post.feature_image } alt={ post.title } />
@@ -34,8 +34,8 @@ const Post = ({ data }) => {
                                     dangerouslySetInnerHTML={{ __html: post.html }}
                                 />
                             </section>
-                        </article>
-                    </div>
+                        </ArticleContent>
+                    </ContainerDiv>
                 </Layout>
             </>
     )

@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { SiteHeader, SiteMast, SiteMastIcon } from '.'
 import Navigation from '../Navigation/Navigation'
+import { ContainerDiv } from '..'
 
 const Header = ({ data, title, description, isHome }) => (
 
     <SiteHeader>
-        <div className="container">
+        <ContainerDiv>
             <SiteMast>
                 <SiteMastIcon>
                     <a href={`https://github.com/DerekSgov/Portfolio`} className="site-nav-item">
@@ -21,7 +22,7 @@ const Header = ({ data, title, description, isHome }) => (
                 </div> :
                 null}
             <Navigation data={data}/>
-        </div>
+        </ContainerDiv>
     </SiteHeader>
 )
 
