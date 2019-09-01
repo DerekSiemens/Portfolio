@@ -10,7 +10,7 @@ const Header = ({ data, title, description, isHome }) => (
             <SiteMast>
                 <SiteMastIcon>
                     <a href={`https://github.com/DerekSgov/Portfolio`} className="site-nav-item">
-                        <img className="site-nav-icon" src="\static\images\logo.svg" alt="GitHub"/>
+                        <img className="site-nav-icon" src="\images\GitHub-Mark-Light-64px.png" alt="GitHub"/>
                     </a>
                 </SiteMastIcon>
             </SiteMast>
