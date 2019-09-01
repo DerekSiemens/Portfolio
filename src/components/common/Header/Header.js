@@ -9,7 +9,7 @@ const Header = ({ data, title, description, isHome }) => (
         <div className="container">
             <SiteMast>
                 <SiteMastIcon>
-                    <a href={`https://github.com/DerekSgov/Portfolio`} className="site-nav-item"><img className="site-nav-icon" src="src\images\github-icon-white.png" alt="GitHub"/></a>
+                    <a href={`https://github.com/DerekSgov/Portfolio`} className="site-nav-item"><img className="site-nav-icon" src="images\logo.svg" alt="GitHub"/></a>
                 </SiteMastIcon>
             </SiteMast>
             { isHome ?
