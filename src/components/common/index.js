@@ -15,3 +15,13 @@ export const ArticleContent = styled.article`
     font-size: 2rem;
     line-height: 1.7em;
 `
+
+export const Title = styled.h1`
+    margin: 0 0 0.8em;
+    font-size: 5rem;
+    @media (max-width: 500px) {
+        margin: 0.8em 0;
+        font-size: 3.4rem;
+    }
+
+`

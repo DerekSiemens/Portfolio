@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, ContainerDiv, ArticleContent } from '../components/common'
+import { Layout, ContainerDiv, ArticleContent, Title } from '../components/common'
 /**
 * Single post view (/:slug)
 *
@@ -21,7 +21,7 @@ const Post = ({ data }) => {
                             <img src={ post.feature_image } alt={ post.title } />
                         </figure> : null }
                     <section className="post-full-content">
-                        <h1 className="content-title">{post.title}</h1>
+                        <Title>{post.title}</Title>
 
                         {/* The main post content */ }
                         <section
