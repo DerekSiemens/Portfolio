@@ -16,10 +16,10 @@ const Post = ({ data }) => {
         <Layout>
             <ContainerDiv>
                 <ArticleContent>
-                    { /*post.feature_image ?
-                                <figure className="post-feature-image">
-                                    <img src={ post.feature_image } alt={ post.title } />
-                                </figure> : null */}
+                    { post.feature_image ?
+                        <figure className="post-feature-image">
+                            <img src={ post.feature_image } alt={ post.title } />
+                        </figure> : null }
                     <section className="post-full-content">
                         <h1 className="content-title">{post.title}</h1>
 
@@ -54,6 +54,7 @@ export const postQuery = graphql`
             title
             id
             html
+            feature_image
     }
 }
 `
