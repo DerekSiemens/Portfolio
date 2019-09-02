@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { RightFooterNavDiv, SiteFooter } from '.'
+import { FooterNavDiv, SiteFooter } from '.'
 import { NavItem } from '../Navigation'
+import { ContainerDiv } from '..'
 
 const Footer = ({ data }) => (
     <SiteFooter>
-        <div className="site-foot-nav container">
-            <RightFooterNavDiv>
+        <ContainerDiv>
+            <FooterNavDiv>
                 {data.map(navItem => (
-                    <NavItem className={`site-nav-item`} to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
+                    <NavItem to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
                 ))}
-            </RightFooterNavDiv>
-        </div>
+            </FooterNavDiv>
+        </ContainerDiv>
     </SiteFooter>
 )
 

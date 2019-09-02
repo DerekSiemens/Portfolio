@@ -1,25 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SiteHeader, SiteMast, SiteMastIcon } from '.'
+import { SiteHeader, SiteMast, SiteMastIcon, GitHubLogo } from '.'
 import Navigation from '../Navigation/Navigation'
 import { ContainerDiv } from '..'
+import { NavItem } from '../Navigation'
+import SiteBanner from '../SiteBanner/SiteBanner'
 
 const Header = ({ data, title, description, isHome }) => (
     <SiteHeader>
         <ContainerDiv>
             <SiteMast>
                 <SiteMastIcon>
-                    <a href={`https://github.com/DerekSgov/Portfolio`} className="site-nav-item">
-                        <img className="site-nav-icon" src="\images\GitHub-Mark-Light-64px.png" alt="GitHub"/>
-                    </a>
+                    <NavItem href={`https://github.com/DerekSgov/Portfolio`}>
+                        <GitHubLogo src="\images\GitHub-Mark-Light-64px.png" alt="GitHub"/>
+                    </NavItem>
                 </SiteMastIcon>
             </SiteMast>
-            { isHome ?
-                <div className="site-banner">
-                    <h1 className="site-banner-title">{title}</h1>
-                    <p className="site-banner-desc">{description}</p>
-                </div> :
-                null}
+            { isHome && <SiteBanner title={title} description={description}/>}
             <Navigation data={data}/>
         </ContainerDiv>
     </SiteHeader>

@@ -6,7 +6,7 @@ const Navigation = ({ data }) => (
     <NavigationNav>
         <LeftNavDiv>
             {data.map(navItem => (
-                <NavItem className={`site-nav-item`} to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
+                <NavItem to={navItem.to} key={navItem.text}>{navItem.text}</NavItem>
             ))}
         </LeftNavDiv>
         <RightNavDiv>

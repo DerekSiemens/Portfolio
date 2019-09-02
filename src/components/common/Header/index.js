@@ -16,8 +16,13 @@ export const SiteMast = styled.div`
 export const SiteMastIcon = styled.div`
     display: flex;
     align-items: center;
-    margin: 0 -10px 0 20px;
+    margin-left: -10px;
     :last-child {
         padding-right: 0;
     }
+`
+
+export const GitHubLogo = styled.img`
+    height: 25px;
+    margin: -5px 0 0;
 `
