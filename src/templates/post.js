@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, ContainerDiv, ArticleContent, Title, FeaturedImage } from '../components/common'
+import { Layout, ContainerDiv, ArticleContent, Title } from '../components/common'
+import { PostContent, PostBody, FeaturedImage } from '../components/common/Posts'
 /**
 * Single post view (/:slug)
 *
@@ -18,15 +19,12 @@ const Post = ({ data }) => {
                 <ArticleContent>
                     { post.feature_image &&
                     <FeaturedImage src={ post.feature_image } alt={ post.title }/> }
-                    <section className="post-full-content">
+                    <PostContent>
                         <Title>{post.title}</Title>
-
-                        {/* The main post content */ }
-                        <section
-                            className="content-body load-external-scripts"
+                        <PostBody
                             dangerouslySetInnerHTML={{ __html: post.html }}
                         />
-                    </section>
+                    </PostContent>
                 </ArticleContent>
             </ContainerDiv>
         </Layout>
