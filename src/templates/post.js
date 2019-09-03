@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, ContainerDiv, ArticleContent, Title } from '../components/common'
+import { Layout, ContainerDiv, ArticleContent, Title, FeaturedImage } from '../components/common'
 /**
 * Single post view (/:slug)
 *
@@ -16,10 +16,8 @@ const Post = ({ data }) => {
         <Layout>
             <ContainerDiv>
                 <ArticleContent>
-                    { post.feature_image ?
-                        <figure className="post-feature-image">
-                            <img src={ post.feature_image } alt={ post.title } />
-                        </figure> : null }
+                    { post.feature_image &&
+                    <FeaturedImage src={ post.feature_image } alt={ post.title }/> }
                     <section className="post-full-content">
                         <Title>{post.title}</Title>
 

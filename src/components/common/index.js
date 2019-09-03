@@ -25,3 +25,10 @@ export const Title = styled.h1`
     }
 
 `
+
+export const FeaturedImage = styled.img`
+    margin: 0 0 3vw;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+`
