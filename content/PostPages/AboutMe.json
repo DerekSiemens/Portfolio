@@ -1,6 +1,6 @@
 {
         "title": "About Me",
-        "html": "<p>My name is Derek Siemens and I am currently a student at the University of Victoria studying computer science and software engineering. In the context of computer science and software engineering, my interest include data mining, natural language processing, security and data science.</p><br><p> Outside of school, I enjoy creating music, hiking, camping, learning new things and working on projects whenever I have some spare time.</p>",
+        "html": "<p>My name is Derek Siemens and I am currently a student at the University of Victoria studying computer science and software engineering. In the context of computer science and software engineering, my interest include data mining, natural language processing, security and data science.</p><p> Outside of school, I enjoy creating music, hiking, camping, learning new things and working on projects whenever I have some spare time.</p>",
         "slug": "/About-Me",
         "feature_image": "",
         "id":"aboutMe"
