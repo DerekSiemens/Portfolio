@@ -1,6 +1,6 @@
 {
     "title": "About This Site",
-    "html": "<h2>In Development</h2>",
+    "html": "<p>This site is built using <a href='https://www.gatsbyjs.org/'>Gatbsy</a>, uses React for the front-end and stores its content in small json files. I chose this combination as it creates a fast web application that is very easy to deploy and add content to from a developer standpoint. Additionally, I had gained a significant amount of experience working with this set tools on my most current co-op work term with the BC Government.</p><p>Big thanks to <a href='https://github.com/TryGhost/gatsby-starter-ghost'>gatsby-starter-ghost</a> for UI inspiration</p>",
     "slug": "/About-This-Site",
     "feature_image": "https://images.unsplash.com/photo-1549479900-9ffbe7c483be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
     "id":"aboutSite"
